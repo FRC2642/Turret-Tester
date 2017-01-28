@@ -60,9 +60,9 @@ public class Robot extends IterativeRobot {
 		//Creates a new USB Camera
 		UsbCamera camera = CameraServer.getInstance().startAutomaticCapture();
 		camera.setResolution(IMG_WIDTH, IMG_HEIGHT);	//Sets the camera resolution
-		camera.setExposureManual(0);	//Sets camera exposure
-		camera.setBrightness(0);	//Sets camera brightness
 		camera.setFPS(15);
+		setCameraDrive();
+		
 		
 		//Creates a new vision thread and a new pipeline
 		//Creates a rectangle based on the contours
@@ -154,6 +154,16 @@ public class Robot extends IterativeRobot {
 		
 		Scheduler.getInstance().run();
 	
+	}
+	
+	public static void setCameraVision() {
+		camera.setExposureManual(0);
+		camera.setBrightness(0);
+	}
+	
+	public static void setCameraDrive() {
+		camera.setExposureManual(50);
+		camera.setBrightness(50);
 	}
 	
 
