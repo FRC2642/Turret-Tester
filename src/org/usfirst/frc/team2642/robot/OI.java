@@ -18,7 +18,7 @@ public class OI {
 		return xBox;
 	}
 	
-	Button xBoxA = new JoystickButton(xBox, 0);
+	Button xBoxA = new JoystickButton(xBox, 1);
 	
 	public OI() {
 		xBoxA.whenPressed(new SetCameraVision());

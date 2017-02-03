@@ -58,7 +58,7 @@ public class Robot extends IterativeRobot {
 		SmartDashboard.putData("Auto mode", chooser);
 		
 		//Creates a new USB Camera
-		UsbCamera camera = CameraServer.getInstance().startAutomaticCapture();
+		camera = CameraServer.getInstance().startAutomaticCapture();
 		camera.setResolution(IMG_WIDTH, IMG_HEIGHT);	//Sets the camera resolution
 		camera.setFPS(15);
 		setCameraDrive();
